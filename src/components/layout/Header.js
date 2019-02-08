@@ -7,9 +7,9 @@ const Header = props => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
       <div className="container">
-        <a href="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           {branding}
-        </a>
+        </Link>
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -27,11 +27,6 @@ const Header = props => {
                 <i className="fas fa-question" /> About
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/test" className="nav-link">
-                <i className="fas fa-trash" /> Test
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
@@ -40,7 +35,7 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  branding: 'My App'
+  branding: 'Contact Manager'
 };
 Header.propTypes = {
   branding: PropTypes.string.isRequired
