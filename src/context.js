@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { notify } from 'react-notify-toast';
-import { v4 } from 'uuid';
 import axios from 'axios';
 const Context = React.createContext();
 const reducer = (state, action) => {
@@ -29,7 +28,6 @@ const addContact = (state, action) => {
   } else {
     notify.show('your new contact has been added successfully !', 'success');
     const contact = action.payload;
-    contact.id = v4();
     return {
       ...state,
       contacts: [action.payload, ...state.contacts]
